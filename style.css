@@ -1,0 +1,206 @@
+/* Import Google Font - Poppins */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;500;600;700&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Poppins', sans-serif;
+}
+body{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 10px;
+  min-height: 100vh;
+  /* background: #5372F0;
+   */
+   /* background-image: url(title.jpg); */
+}
+
+.glass{
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+    backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
+    border-radius: 20px;
+    border:1px solid rgba(255, 255, 255, 0.18);
+    box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+}
+.containers{
+
+    background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 50px;
+  border:1px solid rgba(13, 2, 2, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  max-width: 690px;
+  width: 100%;
+    width: 100%;
+    height: auto;
+    padding: 500px;
+    /* background: #8fa1ea; */
+    border-radius: 7px;
+    box-shadow: 0 10px 20px rgba(208, 9, 9, 0.37);
+    display:inline-table;  
+  
+  
+}
+.wrapper{
+  border-radius: 5px;
+  border: 1px solid #090202;
+}
+.wrapper .text-input{
+  display: flex;
+  border-bottom: 1px solid #170606;
+}
+.text-input .to-text{
+  border-radius: 0px;
+  border-left: 1px solid #0e0202;
+}
+.text-input textarea{
+  height: 250px;
+  width: 100%;
+  border: none;
+  outline: none;
+  resize: none;
+  background: none;
+  font-size: 18px;
+  padding: 10px 15px;
+  border-radius: 5px;
+}
+.text-input textarea::placeholder{
+    font-family: 'Courier New', Courier, monospace;
+    font-weight:bold;
+    font-size: larger;
+
+  color: #0d0101;
+}
+.controls, li, .icons, .icons i{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.controls{
+  list-style: none;
+  padding: 12px 15px;
+}
+.controls .row .icons{
+  width: 38%;
+}
+.controls .row .icons i{
+  width: 50px;
+  color: #100303;
+  font-size: 14px;
+  cursor: pointer;
+  transition: transform 0.2s ease;
+  justify-content: center;
+}
+.controls .row.from .icons{
+  padding-right: 15px;
+  border-right: 1px solid #0f0404;
+}
+.controls .row.to .icons{
+  padding-left: 15px;
+  border-left: 1px solid #0e0505;
+}
+.controls .row select{
+  color: #0b0303;
+  border: 0;
+  outline:#090202
+  font-size: 18px;
+  background: none;
+  padding-left: 10px;
+  font-weight: bold;
+}
+.text-input textarea::-webkit-scrollbar{
+  width: 4px;
+}
+.controls .row select::-webkit-scrollbar{
+  width: 8px;
+}
+.text-input textarea::-webkit-scrollbar-track,
+.controls .row select::-webkit-scrollbar-track{
+  background: #090202;
+}
+.text-input textarea::-webkit-scrollbar-thumb{
+  background: #0c0101;
+  border-radius: 8px;
+}
+.controls .row select::-webkit-scrollbar-thumb{
+  background: #0e0202;
+  border-radius: 8px;
+  border-right: 2px solid #110101;
+}
+.controls .exchange{
+  color: #150202;
+  cursor: pointer;
+  font-size: 16px;
+  transition: transform 0.2s ease;
+}
+.controls i:active{
+  transform: scale(0.9);
+}
+.container button{
+  width: 100%;
+  padding: 17px;
+  outline: none;
+  border: none;
+  color: #fff;
+  cursor: pointer;
+  margin-top: 20px;
+  font-size: 17px;
+  border-radius: 5px;
+  /* background: #5372F0; */
+  background: linear-gradient(135deg, rgba(255, 255, 255, 0.1), rgba(255, 255, 255, 0));
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  border-radius: 20px;
+  border:1px solid rgba(255, 255, 255, 0.18);
+  box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.37);
+  max-width: 690px;
+  width: 100%;
+}
+.backgrounds-clip{
+    position: absolute;
+    right: 0;
+    bottom: 0;
+    z-index: -1;
+}
+@media (min-aspect-ratio:16/9) {
+    .backgrounds-clip{
+        width: auto;
+        height: 100%;
+    }
+}
+
+@media (max-width: 660px){
+  .container{
+    padding: 20px;
+  }
+  .wrapper .text-input{
+    flex-direction: column;
+  }
+  .text-input .to-text{
+    border-left: 0px;
+    border-top: 1px solid #0c0101;
+    font-weight: bold;
+  }
+  .text-input textarea{
+    height: 200px;
+    font-weight: bold;
+  }
+  .controls .row .icons{
+    display: none;
+  }
+  .container button{
+    padding: 13px;
+    font-size: 16px;
+  }
+  .controls .row select{
+    font-size: 16px;
+  }
+  .controls .exchange{
+    font-size: 14px;
+  }
+}
+
